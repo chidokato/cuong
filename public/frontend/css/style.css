@@ -142,5 +142,12 @@ button.btn.btn-shadow, .btn:not(.close):not(.mfp-close).btn-shadow, a.btn:not([h
 	.profile .form {
 	    width: auto;
 	}
+	#mainMenu:not(.menu-overlay).menu-animate nav{
+		background-color: #fff;
+		padding: 20px;
+	}
+	.header-extras {
+	    height: 50px;
+	}
 
 }
