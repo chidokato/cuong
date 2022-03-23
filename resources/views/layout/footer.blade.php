@@ -4,9 +4,8 @@
 <div class="row">
 <div class="col-lg-5">
 <div class="widget">
-<div class="widget-title">Sổ Tay Tiêu Dùng</div>
-<p class="mb-5">Hãy là người tiêu dùng thông thái khi tình trạng thực phẩm bẩn, thực phẩm mất an toàn đang là nỗi lo của nhiều gia đình, ...
-.</p>
+<div class="widget-title">Phòng Kinh Doanh 9</div>
+<p class="mb-5">Những kiến thức danh cho sale ...</p>
 <a href="" class="btn btn-inverted" target="_blank">Nhận thông tin</a>
 </div>
 </div>
@@ -37,7 +36,7 @@
 </div>
 </div>
 
-<div class="col-lg-3">
+<!-- <div class="col-lg-3">
 <div class="widget">
 <div class="widget-title">Sản phẩm</div>
 <ul class="list">
@@ -45,7 +44,7 @@
 <li><a href="#">Cây cảnh để bàn</a></li>
 </ul>
 </div>
-</div>
+</div> -->
 
 </div>
 </div>

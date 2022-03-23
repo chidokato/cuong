@@ -15,7 +15,7 @@
 		<form id="form1" action="admin/login" class="form-grey-fields form-validate" method="post">
 			<input type="hidden" name="_token" value="{{csrf_token()}}" />
 			<h3>Chào mừng bạn !</h3>
-			<p>Đăng nhập để trải nghiệm tốt.</p>
+			<p>Đăng nhập để xem những thông tin bổ ích.</p>
 			<div class="form-group">
 				<label class="sr-only">Tài khoản</label>
 				<input name="name" placeholder="Tài khoản" class="form-control" type="text" required>

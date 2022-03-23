@@ -134,9 +134,7 @@ class c_frontend extends Controller
                     ]);
                 }
             }else{
-                return view('pages.orrors',[
-                    'articles'=>$articles,
-                ]);
+                return redirect('signin');
             }
         }
     }
