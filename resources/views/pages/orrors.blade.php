@@ -34,7 +34,7 @@
 								<h1>{{$articles->name}}</h1>
 								<div class="post-meta">
 									<span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{date('d/m/Y',strtotime($articles->created_at))}}</span>
-									<span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
+									<!-- <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span> -->
 									<span class="post-meta-category"><a href=""><i class="fa fa-tag"></i>{{$articles->category->name}}</a></span>
 									<!-- <div class="post-meta-share">
 										<a class="btn btn-xs btn-slide btn-facebook" href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>

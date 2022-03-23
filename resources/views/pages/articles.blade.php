@@ -34,13 +34,13 @@
 								<h1>{{$articles->name}}</h1>
 								<div class="post-meta">
 									<span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{date('d/m/Y',strtotime($articles->created_at))}}</span>
-									<span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
+									<!-- <span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span> -->
 									<span class="post-meta-category"><a href=""><i class="fa fa-tag"></i>{{$articles->category->name}}</a></span>
-									<div class="post-meta-share">
+									<!-- <div class="post-meta-share">
 										<a class="btn btn-xs btn-slide btn-facebook" href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
 										<a class="btn btn-xs btn-slide btn-twitter" href="#" data-width="100"><i class="fab fa-twitter"></i><span>Twitter</span></a>
 										<a class="btn btn-xs btn-slide btn-instagram" href="#" data-width="118"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-									</div>
+									</div> -->
 								</div>
 								<div class="content" id="contents">
 									{!! $articles->content !!}
@@ -51,7 +51,6 @@
 								<!-- <a href="{{$articles->category->slug}}">{{$articles->category->name}}</a> -->
 							</div>
 						<!-- @include('layout.comment') -->
-						<div class="fb-comments" data-href="{{asset('')}}{{$articles->category->slug}}/{{$articles->slug}}" data-width="100%" data-numposts="5"></div>
 						</div>
 					</div>
 				</div>

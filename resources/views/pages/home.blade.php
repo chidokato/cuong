@@ -17,7 +17,11 @@
 			<div class="slide-captions text-center text-light">
 				<h1>PHÒNG KINH DOANH 9</h1>
 				<!-- <p>Hãy là “người tiêu dùng thông thái” ... Đó là thông điệp xuyên suốt mà các chuyên gia, các nhà quản lý cùng nhà báo muốn chuyển tải tới độc giả của Nhân Dân ...</p> -->
+				@if( isset(Auth::User()->id) )
+				<p>{{Auth::User()->your_name}}</p>
+				@else
 				<a class="btn" data-target="#modal" data-toggle="modal" href="#">THAM GIA NGAY</a>
+				@endif
 				<br><small id="hidden">{{session('Success')}}</small>
 			</div>
 		</div>

@@ -191,7 +191,7 @@ class usercontroller extends Controller
             if (Auth::User()->permission < 5) {
                 return redirect('admin/dashboard');
             }else{
-                return redirect('/');
+                return redirect('/')->with('Success','Đăng nhập thành công !');
             }
     	}
     	else
