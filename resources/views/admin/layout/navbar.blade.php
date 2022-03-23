@@ -21,15 +21,15 @@
     <li class="nav-item">
         <a class="nav-link" href="admin/category/list"><i class="fas fa-fw fa-chart-area"></i><span>Quản lý danh mục</span></a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="admin/product/list"><i class="fas fa-fw fa-chart-area"></i><span>Quản lý sản phẩm</span></a>
-    </li>
+    </li> -->
     <li class="nav-item">
         <a class="nav-link" href="admin/news/list"><i class="fas fa-fw fa-chart-area"></i><span>Quản lý tin tức</span></a>
     </li>
-    <li class="nav-item">
+    <!-- <li class="nav-item">
         <a class="nav-link" href="admin/messages/list"><i class="fas fa-fw fa-chart-area"></i><span>Quản lý messages</span></a>
-    </li>
+    </li> -->
     <li class="nav-item">
         <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#setting"
             aria-expanded="true" aria-controls="setting">
