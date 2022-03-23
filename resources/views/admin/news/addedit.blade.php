@@ -79,7 +79,17 @@ if(isset($data)){
                         @endif
                     </select>
                 </div>
+                <div class="form-group">
+                    <label>Quyền người dùng</label>
+                    <select name='permission_id[]' class="form-control kt_select2_1 select2" multiple>
+                        <option value="">-- Select --</option>
+                        @foreach($permission as $val)
+                        <option <?php if(isset($data) && in_array($val->id, explode(',',$data->permission_id))){echo 'selected';} ?> value="{{$val->id}}">{{$val->name}}</option>
+                        @endforeach
+                    </select>
+                </div>
             </div>
+            
         </div>
         
         <div class="card shadow mb-4">

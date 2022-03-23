@@ -13,6 +13,7 @@ use App\district;
 use App\mausac;
 use App\size;
 use App\messages;
+use App\permission;
 use Mail;
 use Auth;
 
@@ -94,8 +95,9 @@ class c_frontend extends Controller
         }
 
         if ($category['sort_by'] == 2) {
+            $permission = permission::get();
             $articles = articles::where('status','true')->whereIn('category_id',$cat_array)->orderBy('id','desc')->paginate(15);
-            return view('pages.news',['category'=>$category, 'articles'=>$articles, 'active'=>$active]);
+            return view('pages.news',['category'=>$category, 'articles'=>$articles, 'active'=>$active, 'permission'=>$permission,]);
         }
 
         if ($category['sort_by'] == 3) {
@@ -107,7 +109,6 @@ class c_frontend extends Controller
     public function articles($curl,$arurl)
     {
         $articles = articles::where('slug',$arurl)->first();
-        
         $id = $articles['id'];
         // $articles->hits = $articles['hits'] + 1;
         // $articles->save();
@@ -121,7 +122,22 @@ class c_frontend extends Controller
             return view('pages.articles_product',['articles'=>$articles,'lienquan'=>$lienquan]);
         }
         if ($articles['sort_by'] == 2) {
-            return view('pages.articles',['articles'=>$articles,'lienquan'=>$lienquan]);
+            if (isset(Auth::User()->permission_id)) {
+                if(in_array(Auth::User()->permission_id, explode(',',$articles->permission_id))){
+                    return view('pages.articles',[
+                        'articles'=>$articles,
+                        'lienquan'=>$lienquan,
+                    ]);
+                }else{
+                    return view('pages.orrors',[
+                        'articles'=>$articles,
+                    ]);
+                }
+            }else{
+                return view('pages.orrors',[
+                    'articles'=>$articles,
+                ]);
+            }
         }
     }
 

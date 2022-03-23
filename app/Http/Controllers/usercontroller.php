@@ -7,6 +7,7 @@ use Illuminate\Support\Facades\Auth;
 use App\User;
 use App\category;
 use App\articles;
+use App\permission;
 use File;
 use Mail;
 
@@ -38,6 +39,7 @@ class usercontroller extends Controller
     public function getlist()
     {
         $user = User::orderBy('id','desc')->get();
+        
         return view('admin.user.list',['user'=>$user]);
     }
 
@@ -67,7 +69,8 @@ class usercontroller extends Controller
 
     public function getadd()
     {
-    	return view('admin.user.addedit');
+        $permission = permission::orderBy('id','desc')->get();
+    	return view('admin.user.addedit', ['permission'=>$permission]);
     }
 
     public function postadd(Request $Request)
@@ -84,6 +87,7 @@ class usercontroller extends Controller
         $user->name = $Request->name;
         $user->password = bcrypt($Request->password);
         $user->permission = $Request->permission;
+        $user->permission_id = $Request->permission_id;
         $user->your_name = $Request->your_name;
         $user->email = $Request->email;
         $user->phone = $Request->phone;
@@ -106,7 +110,8 @@ class usercontroller extends Controller
     public function getedit($id)
     {
         $user = User::find($id);
-    	return view('admin.user.addedit',['data'=>$user]);
+        $permission = permission::orderBy('id','desc')->get();
+    	return view('admin.user.addedit',['data'=>$user, 'permission'=>$permission]);
     }
 
     public function postedit(Request $Request,$id)
@@ -120,6 +125,7 @@ class usercontroller extends Controller
             ] );
         $user = User::find($id);
         $user->name = $Request->name;
+        $user->permission_id = $Request->permission_id;
         $user->your_name = $Request->your_name;
         $user->email = $Request->email;
         $user->phone = $Request->phone;
@@ -217,6 +223,7 @@ class usercontroller extends Controller
         $user->name = $Request->name;
         $user->password = bcrypt($Request->password);
         $user->permission = 6;
+        $user->permission_id = 0;
         $user->your_name = $Request->your_name;
         $user->email = $Request->email;
         $user->phone = $Request->phone;

@@ -12,7 +12,8 @@
 <div class="form-sign profile" style="background: url(images/slider/notgeneric_bg3.jpg);">
 	<div class="form">
 		<form action="registration/{{Auth::User()->id}}" class="form-grey-fields" method="post" enctype="multipart/form-data"><input type="hidden" name="_token" value="{{csrf_token()}}" />
-			<input type="hidden" name="permission" value="5" />
+			<input type="hidden" name="permission" value="6" />
+			<input type="hidden" name="permission_id" value="{{Auth::User()->permission_id}}" />
 			<div class="content clearfix">
 				<div class="text-left">
 					<img src="data/user/{{Auth::User()->avatar}}" class="avatar avatar-lg">

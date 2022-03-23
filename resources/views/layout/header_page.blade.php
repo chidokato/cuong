@@ -4,8 +4,8 @@
 
 <div id="logo">
 <a href="{{asset('')}}">
-<span class="logo-default">STTD</span>
-<span class="logo-dark">STTD</span>
+<span class="logo-default">P.KD9</span>
+<span class="logo-dark">P.KD9</span>
 </a>
 </div>
 
@@ -71,7 +71,7 @@
 </div>
 @endif
 
-<div class="p-dropdown" style="margin-left: 10px;">
+<!-- <div class="p-dropdown" style="margin-left: 10px;">
 <a class="btn btn-light btn-shadow btn-round"><i class="icon-shopping-cart"></i></a>
 <div class="p-dropdown-content">
 <div class="widget-mycart">
@@ -103,7 +103,7 @@
 </div>
 </div>
 </div>
-</div>
+</div> -->
 
 </div>
 
@@ -117,7 +117,7 @@
 <nav>
 <ul>
 
-<li><a href="{{asset('')}}">Trang chủ</a></li>
+<li><a href="{{asset('')}}"><i class="icon-home"></i></a></li>
 @foreach($menu as $val)
 <li><a href="{{$val->slug}}">{{$val->name}}</a></li>
 @endforeach

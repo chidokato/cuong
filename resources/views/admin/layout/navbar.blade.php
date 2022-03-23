@@ -77,9 +77,23 @@
             </div>
         </div>
     </li> -->
+
     <li class="nav-item">
-        <a class="nav-link" href="admin/user/list"><i class="fas fa-fw fa-chart-area"></i><span>Người dùng</span></a>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#user"
+            aria-expanded="true" aria-controls="setting">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Người dùng</span>
+        </a>
+        <div id="user" class="collapse" aria-labelledby="headingUtilities"
+            data-parent="#accordionSidebar">
+            <div class="bg-white py-2 collapse-inner rounded">
+                <a class="collapse-item" href="admin/user/list">Danh sách người dùng</a>
+                <a class="collapse-item" href="admin/permission/list">Nhóm quyền</a>
+            </div>
+        </div>
     </li>
+
+
 
     
 

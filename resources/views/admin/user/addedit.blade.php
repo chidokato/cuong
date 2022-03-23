@@ -23,12 +23,20 @@
                             <input name="name" value="{{ isset($data) ? $data->name : '' }}" type="text" placeholder="Name ..." class="form-control ">
                         </div>
                         <div class="form-group">
-                            <label>Quyền người dùng</label>
+                            <label>Quyền admin</label>
                             <select name='permission' class="form-control">
-                                <option value="0">superadmin</option>
-                                <option value="1">admin</option>
-                                <option value="2">author</option>
-                                <option value="3">member</option>
+                                <option <?php if(isset($data) && $data->permission == 0){ echo 'selected'; } ?> value="0">superadmin</option>
+                                <option <?php if(isset($data) && $data->permission == 1){ echo 'selected'; } ?> value="1">admin</option>
+                                <option <?php if(isset($data) && $data->permission == 6){ echo 'selected'; } ?> value="6">Member</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Quyền người dùng</label>
+                            <select name='permission_id' class="form-control">
+                                <option <?php if(isset($data) && $data->permission_id == 0){ echo 'selected'; } ?> value="0">Người dùng mới</option>
+                                @foreach($permission as $val)
+                                <option <?php if(isset($data) && $data->permission_id == $val->id){ echo 'selected'; } ?> value="{{$val->id}}">{{$val->name}}</option>
+                                @endforeach
                             </select>
                         </div>
                         @if(isset($data))

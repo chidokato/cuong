@@ -36,14 +36,16 @@
 									<span class="post-meta-date"><i class="fa fa-calendar-o"></i>{{date('d/m/Y',strtotime($articles->created_at))}}</span>
 									<span class="post-meta-comments"><a href=""><i class="fa fa-comments-o"></i>33 Comments</a></span>
 									<span class="post-meta-category"><a href=""><i class="fa fa-tag"></i>{{$articles->category->name}}</a></span>
-									<div class="post-meta-share">
+									<!-- <div class="post-meta-share">
 										<a class="btn btn-xs btn-slide btn-facebook" href="#"><i class="fab fa-facebook-f"></i><span>Facebook</span></a>
 										<a class="btn btn-xs btn-slide btn-twitter" href="#" data-width="100"><i class="fab fa-twitter"></i><span>Twitter</span></a>
 										<a class="btn btn-xs btn-slide btn-instagram" href="#" data-width="118"><i class="fab fa-instagram"></i><span>Instagram</span></a>
-									</div>
+									</div> -->
 								</div>
 								<div class="content" id="contents">
-									{!! $articles->content !!}
+									<h2 style="color: red;">Truy cập không hợp lệ</h2>
+									<p>Rất tiếc bạn thuộc nhóm thành viên không thể truy cập trang này, nếu bạn cảm thấy thông báo này là 1 sự nhầm lẫn và bạn chắc chắn rằng bạn thuộc nhóm có quyền truy cập, hoặc bạn muốn nâng cấp tài khoản của mình để có thể truy cập vào nội dung này, xin vui lòng liên hệ chuyên viên tư vấn hoặc hotline </p>
+									<p>Cám ơn bạn luôn quan tâm và ủng hộ</p>
 								</div>
 							</div>
 							<div class="post-tags">

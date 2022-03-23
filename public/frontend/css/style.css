@@ -32,7 +32,7 @@
     height: 50px;
 }
 .header-inner{
-	box-shadow: 0 6px 6px rgb(0 0 0 / 6%);
+	/*box-shadow: 0 6px 6px rgb(0 0 0 / 6%);*/
 }
 .heading-text.heading-section h2{
 	font-size: 2rem;line-height: 0px;
@@ -48,7 +48,7 @@
     padding: 14px!important;
 }
 .inspiro-slider.slider-fullscreen {
-    height: 80vh;
+    /*height: 80vh;*/
 }
 .iteam-card{ margin-left: 10px; position: relative; }
 .product-overlay button{
@@ -122,7 +122,12 @@ button:focus {
 }
 .product .product-price {
     width: auto;}
-
+.dark .header-extras .p-dropdown a>span, .dark .header-extras a>i {
+    color: #212529;
+}
+button.btn.btn-shadow, .btn:not(.close):not(.mfp-close).btn-shadow, a.btn:not([href]):not([tabindex]).btn-shadow {
+    box-shadow: NONE;
+}
 
 
 @media (max-width: 1024px){

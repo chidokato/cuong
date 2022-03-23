@@ -1,11 +1,11 @@
-<header id="header" class="header-always-fixed">
+<header id="header" data-transparent="true"  class="header-always-fixed dark submenu-light">
 <div class="header-inner">
 <div class="container">
 
 <div id="logo">
 <a href="{{asset('')}}">
-<span class="logo-default">STTD</span>
-<span class="logo-dark">STTD</span>
+<span class="logo-default">P.KD9</span>
+<span class="logo-dark">P.KD9</span>
 </a>
 </div>
 
@@ -46,7 +46,7 @@
 			<p class="text-muted"><b>{{Auth::User()->your_name}}</b></p>
 			<ul class="text-center">
 				<li><a href="profile"><i class="icon-user"></i>My profile</a></li>
-				<li><a href="messages"><i class="icon-mail"></i>Messages</a></li>
+				<!-- <li><a href="messages"><i class="icon-mail"></i>Messages</a></li> -->
 				<!-- <li><a href="settings"><i class="icon-settings"></i>Settings</a></li> -->
 				<li><a href="logout"><i class="icon-log-out"></i>Sing Out</a>
 			</li>
@@ -70,7 +70,7 @@
 </div>
 @endif
 
-<div class="p-dropdown iteam-card">
+<!-- <div class="p-dropdown iteam-card">
 <a class="btn btn-light btn-shadow btn-round"><i class="icon-shopping-cart"></i></a>
 <div class="p-dropdown-content">
 <div class="widget-mycart">
@@ -102,7 +102,7 @@
 </div>
 </div>
 </div>
-</div>
+</div> -->
 
 </div>
 
@@ -115,7 +115,7 @@
 <nav>
 <ul>
 
-<li><a href="{{asset('')}}">Trang chủ</a></li>
+<li><a href="{{asset('')}}"><i class="icon-home"></i></a></li>
 @foreach($menu as $val)
 <li><a href="{{$val->slug}}">{{$val->name}}</a></li>
 @endforeach

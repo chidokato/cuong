@@ -9,6 +9,7 @@ use App\seo;
 use App\articles;
 use App\category;
 use App\images;
+use App\permission;
 
 class c_news extends Controller
 {
@@ -56,8 +57,10 @@ class c_news extends Controller
     public function getadd()
     {
         $category = category::where('sort_by',2)->orderBy('id','desc')->get();
+        $permission = permission::orderBy('id','desc')->get();
         return view('admin.news.addedit',[
-            'category'=>$category
+            'category'=>$category,
+            'permission'=>$permission,
         ]);
     }
 
@@ -83,6 +86,7 @@ class c_news extends Controller
         $articles = new articles;
         $articles->user_id = Auth::User()->id;
         $articles->category_id = $Request->cat_id;
+        if(isset($Request->permission_id)){$articles->permission_id = implode(',', $Request->permission_id);}
         $articles->seo_id = $seo->id;
         $articles->sort_by = '2';
         $articles->sku = str_random(8);
@@ -126,10 +130,12 @@ class c_news extends Controller
         $data = articles::findOrFail($id);
         $seo = seo::findOrFail($data['seo_id']);
         $category = category::where('sort_by',2)->orderBy('id','desc')->get();
+        $permission = permission::orderBy('id','desc')->get();
         return view('admin.news.addedit',[
             'data'=>$data,
             'category'=>$category,
             'seo'=>$seo,
+            'permission'=>$permission,
         ]);
     }
 
@@ -141,6 +147,7 @@ class c_news extends Controller
         $articles->detail = $Request->detail;
         $articles->content = $Request->content;
         $articles->category_id = $Request->cat_id;
+        if(isset($Request->permission_id)){$articles->permission_id = implode(',', $Request->permission_id);}
         if ($Request->hasFile('img')) {
             // xóa ảnh cũ
             if(File::exists('data/news/'.$articles->img)) { 
