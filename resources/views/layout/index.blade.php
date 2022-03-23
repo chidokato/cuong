@@ -38,6 +38,10 @@
 <link href="frontend/css/style.css" rel="stylesheet">
 <link href="frontend/toc.css" rel="stylesheet">
 <!-- ================= js ================== --> 
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v13.0&appId=493898662375038&autoLogAppEvents=1" nonce="KCxZOrDm"></script>
+
 @yield('css')
 {!! $head_setting->codeheader !!}
 </head>
@@ -59,5 +63,8 @@
 <script src="frontend/validate/valildate-rules.js"></script>
 @yield('script')
 <script src="frontend/toc.js"></script>
+
+
+
 </body>
 </html>

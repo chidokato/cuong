@@ -51,6 +51,7 @@
 								<!-- <a href="{{$articles->category->slug}}">{{$articles->category->name}}</a> -->
 							</div>
 						<!-- @include('layout.comment') -->
+						<div class="fb-comments" data-href="{{asset('')}}{{$articles->category->slug}}/{{$articles->slug}}" data-width="100%" data-numposts="5"></div>
 						</div>
 					</div>
 				</div>
