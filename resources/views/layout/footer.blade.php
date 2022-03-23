@@ -12,7 +12,7 @@
 <div class="col-lg-7">
 <div class="row">
 
-<div class="col-lg-3">
+<!-- <div class="col-lg-3">
 <div class="widget">
 <div class="widget-title">Liên kết</div>
 <ul class="list">
@@ -22,7 +22,7 @@
 <li><a href="#">Sendo</a></li>
 </ul>
 </div>
-</div>
+</div> -->
 
 <div class="col-lg-3">
 <div class="widget">
