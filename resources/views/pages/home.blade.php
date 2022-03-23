@@ -18,11 +18,13 @@
 				<h1>PHÒNG KINH DOANH 9</h1>
 				<!-- <p>Hãy là “người tiêu dùng thông thái” ... Đó là thông điệp xuyên suốt mà các chuyên gia, các nhà quản lý cùng nhà báo muốn chuyển tải tới độc giả của Nhân Dân ...</p> -->
 				<a class="btn" data-target="#modal" data-toggle="modal" href="#">THAM GIA NGAY</a>
+				<br><small id="hidden">{{session('Success')}}</small>
 			</div>
 		</div>
 	</div>
 </div>
 
+<form id="form1" action="admin/login" class="form-grey-fields form-validate" method="post"><input type="hidden" name="_token" value="{{csrf_token()}}" />
 <div class="modal fade" id="modal" tabindex="-1" role="modal" aria-labelledby="modal-label" aria-hidden="true" style="display: none;">
 <div class="modal-dialog">
 <div class="modal-content">
@@ -33,18 +35,43 @@
 <div class="modal-body">
 <div class="row">
 <div class="col-md-12">
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium atque architecto
-quae ullam rem labore veritatis temporibus asperiores, ad eaque odit commodi
-inventore dolore perspiciatis, nam dicta est eos id quod excepturi.</p>
+
+<div class="form-group">
+	<label class="sr-only">Tài khoản</label>
+	<input name="name" placeholder="Tài khoản" class="form-control" type="text" required>
+</div>
+<div class="form-group m-b-5">
+	<label class="sr-only">Mật khẩu</label>
+	<input name="password" placeholder="Mật khẩu" class="form-control" type="password">
+</div>
+<div class="form-group form-inline text-left m-b-10 ">
+	<a class="right" href="resetpassword">
+	<p><small>Lấy lại tài khoản hoặc mật khẩu?</small></p>
+</a>
+</div>
+
 </div>
 </div>
 </div>
 <div class="modal-footer">
-<button type="button" class="btn btn-b" data-dismiss="modal">Close</button>
-<button type="button" class="btn btn-b">Save Changes</button>
+<button type="button" class="btn btn-b" data-dismiss="modal">Thoát</button>
+<button type="submit" class="btn btn-b">Đăng nhập</button>
+
+<p class="text-left">Bạn chưa có tài khoản? <a href="signup">Đăng ký ngay</a> </p>
 </div>
 </div>
 </div>
 </div>
+</form>
+
+<style type="text/css">
+	#hidden{color: #fff; font-size: 1.1rem;}
+</style>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script>
+    setTimeout(function() {
+	    $('#hidden').fadeOut('fast');
+	}, 9000);
+</script>
 
 @endsection
